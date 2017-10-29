@@ -4,7 +4,7 @@ Repo for my sessions at DataHack Summit 2017
 
 # Sessions
 
-[Alok K. Shukla](mailto:alokks2@illinois.edu?Subject=DataHack2017)
 
-- ## Talk - A Gentle Introduction to Bayesian Deep Learning
-- ## Hack Session - Visual Storytelling with D3
+
+- ## Talk - [A Gentle Introduction to Bayesian Deep Learning](https://github.com/alokkshukla/DataHack/tree/master/BayesianDL)
+- ## Hack Session - [Visual Storytelling with D3](https://github.com/alokkshukla/DataHack/tree/master/D3WithJupyter)
