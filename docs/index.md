@@ -69,7 +69,7 @@ Introducing [Edward](https://edwardlib.org) - Tensors + Randomness
 
 Discussion about NIPS workshop. Leading researchers.
 
-## Resources
+### Resources
 - Bayesian Deep Learning Workshop NIPS 2016 <http://bayesiandeeplearning.org/2016/index.html> 
 - Yarin Gal's PhD Thesis - Uncertainty in Deep Learning <http://mlg.eng.cam.ac.uk/yarin/blog_2248.html>
 
