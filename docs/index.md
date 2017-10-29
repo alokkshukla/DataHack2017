@@ -1,7 +1,11 @@
 ---
 layout: default
-title: A Gentle Introduction to Bayesian Deep Learning
+title: Talk and Hack Session at DataHack Summit 2017
 ---
+
+## Talk - A Gentle Introduction to Bayesian Deep Learning
+## Hack Session - Visual Storytelling with D3
+
 
 # A Gentle Introduction to Bayesian Deep Learning
 ## [DataHack Summit 2017](https://www.analyticsvidhya.com/datahacksummit/)
