@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Talk and Hack Session at DataHack Summit 2017
+title: DataHack Summit 2017
 ---
 # Sessions 
 
