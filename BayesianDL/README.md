@@ -9,12 +9,12 @@ by [Alok K. Shukla](mailto:alokks2@illinois.edu?Subject=DataHack2017)
 
 
 This talk introduces the fundamental ideas behind the emergent field of Bayesian Deep Learning. 
-Most of the material is borrowed from [NIPS Bayesian Deep Leraning Workshop](http://bayesiandeeplearning.org) proceedings. 
+Most of the material is borrowed from [NIPS Bayesian Deep Learning Workshop](http://bayesiandeeplearning.org) proceedings. 
 Many thanks to [Zoubin Ghahramani](http://mlg.eng.cam.ac.uk/zoubin/) and [Yarin Gal](http://www.cs.ox.ac.uk/people/yarin.gal/website/).
 
 ## Intended Audience
 
-Someone with basic understanding fundamentals of Machine Learning and Neural Networks and The Bayes Rule.
+Someone with basic understanding of the fundamentals of Machine Learning and Neural Networks and The Bayes Rule.
 
 ## Outline
 
