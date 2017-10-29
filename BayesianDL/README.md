@@ -5,6 +5,9 @@
 
 by [Alok K. Shukla](mailto:alokks2@illinois.edu?Subject=DataHack2017)
 
+# A Gentle Introduction to Bayesian Deep Learning
+
+
 This talk introduces the fundamental ideas behind the emergent field of Bayesian Deep Learning. 
 Most of the material is borrowed from [NIPS Bayesian Deep Leraning Workshop](http://bayesiandeeplearning.org) proceedings. 
 Many thanks to [Zoubin Ghahramani](http://mlg.eng.cam.ac.uk/zoubin/) and [Yarin Gal](http://www.cs.ox.ac.uk/people/yarin.gal/website/).
@@ -19,26 +22,31 @@ The talk is supposed to last about 45 minutes, with additional time for Q&A.
 
 ### Introduction
 
-Discussion about converging ideas; how new and old amalgamate to bring something novel. 
+- Discussion about converging ideas
+- How new and old amalgamate to bring something novel. 
 
 ### Bayes Rule and Bayesian Inference
 
-The famous Bayes Rule. Discussion about priors, likelihood and posteriors. 
-The complete Bayesian Inference process. How posterior predictive models are used for estimation.  
+- The famous Bayes Rule. 
+- Discussion about priors, likelihood and posteriors. 
+- The complete Bayesian Inference process. How posterior predictive models are used for estimation.  
 
 ### Neural Network - Revisited
 
-A simple neural network as function approximator. 
-Parameters and hyper-parameters of a Neural Network. Discusion about point predictions and overfitting.
+- A simple neural network as function approximator. 
+- Parameters and hyper-parameters of a Neural Network. 
+- Discusion about point predictions and overfitting.
 
 ### Need of Bayesian Approach in Deep Learning
 
-How incorporating uncertainty is essential at times. And what other benefits it might provide. 
+- How incorporating uncertainty is essential at times. 
+- And what other benefits it might provide. 
 
 ### Bayesian Neural Network 
 
-Bringing priors to parameters in Neural Network. Levels of unceratinty in a Neural Network.
-Implaications. Discussion about how Dropout and Regularization can be expalined using Bayesain Reasoning.
+- Bringing priors to parameters in Neural Network. 
+- Levels of unceratinty in a Neural Network.
+- Implications. Discussion about how Dropout and Regularization can be expalined using Bayesain Reasoning.
 
 ### Bayesian Inference in Neural Networks
 
