@@ -9,11 +9,12 @@ title: Talk and Hack Session at DataHack Summit 2017
 
 by [Alok K. Shukla](mailto:alokks2@illinois.edu?Subject=DataHack2017)
 
-## Talk - A Gentle Introduction to Bayesian Deep Learning
-## Hack Session - Visual Storytelling with D3
+## Talk - [A Gentle Introduction to Bayesian Deep Learning](#talk)
+## Hack Session - [Visual Storytelling with D3](#session)
 
 
-# A Gentle Introduction to Bayesian Deep Learning
+
+<h1 id="talk">A Gentle Introduction to Bayesian Deep Learning</h1>
 
 
 This talk introduces the fundamental ideas behind the emergent field of Bayesian Deep Learning. 
@@ -72,8 +73,7 @@ Discussion about NIPS workshop. Leading researchers.
 - Bayesian Deep Learning Workshop NIPS 2016 <http://bayesiandeeplearning.org/2016/index.html> 
 - Yarin Gal's PhD Thesis - Uncertainty in Deep Learning <http://mlg.eng.cam.ac.uk/yarin/blog_2248.html>
 
-
-# Visual Storytelling with D3
+<h1 id="session">Visual Storytelling with D3</h1>
 
 Huge thanks to [Mike Bostock](https://bost.ocks.org/mike/).
 
