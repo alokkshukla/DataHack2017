@@ -3,11 +3,12 @@ layout: default
 title: DataHack Summit 2017
 ---
 # Sessions 
-
-## [DataHack Summit 2017](https://www.analyticsvidhya.com/datahacksummit/)
-
-
 by [Alok K. Shukla](mailto:alokks2@illinois.edu?Subject=DataHack2017)
+
+at [DataHack Summit 2017](https://www.analyticsvidhya.com/datahacksummit/)
+
+
+
 
 #### Talk - [A Gentle Introduction to Bayesian Deep Learning](#talk)
 #### Hack Session - [Visual Storytelling with D3](#session)
