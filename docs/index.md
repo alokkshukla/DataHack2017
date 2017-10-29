@@ -9,8 +9,8 @@ title: Talk and Hack Session at DataHack Summit 2017
 
 by [Alok K. Shukla](mailto:alokks2@illinois.edu?Subject=DataHack2017)
 
-## Talk - [A Gentle Introduction to Bayesian Deep Learning](#talk)
-## Hack Session - [Visual Storytelling with D3](#session)
+#### Talk - [A Gentle Introduction to Bayesian Deep Learning](#talk)
+#### Hack Session - [Visual Storytelling with D3](#session)
 
 
 
