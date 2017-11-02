@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Visual Storytelling with Jupyter and D3.js</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/atom-one-light.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>Visual Storytelling with Jupyter and D3.js</h3>
+					<h4><a href="https://www.analyticsvidhya.com/datahacksummit/">DataHack Summit 2017</a> </h4>
+					<p>
+						<small><a href="http://www.alokkumarshukla.com">Alok K. Shukla</a></small>
+					</p>
+				</section>
+
+				<section>
+                    <img width = 80% data-src="res/lotr.png" alt="LoTR">
+                    <small>Courtesy: Nadieh Bremer at <a href="www.visualcinnamon.com/portfolio/words-lord-of-the-rings">Visual Cinnamon</a></small>
+                </section>
+
+				<section>
+					<h3>Why should you care?</h3>
+                    <small><ul>
+                        <li class="fragment">You prefer the Hard Way!</li>
+                        <li class="fragment">You need the Ultimate Freedom!</li>
+                        <li class="fragment">You love  <a href="http://www.beautifulinenglish.com">that</a> visualization.</li>
+                        <li class="fragment">May be you've front-end friends.</li>
+                        <li class="fragment">You don't ever want to leave your Notebook.</li>
+
+                    </ul></small>
+
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Getting Started</h2>
+					</section>
+					<section>
+						<h3>Setup Jupyter</h3>
+                        <pre><code class="hljs" data-trim contenteditable>
+%%javascript
+requirejs.config({
+    paths: {
+        'd3': ['//d3js.org/d3.v4.min'],
+
+    },
+});
+
+require(['d3'], function(d3) {
+    window.d3=d3
+});
+					</code></pre>
+					</section>
+					<section>
+						<h3>Hello! World</h3>
+                        <pre><code class="hljs" data-trim contenteditable>
+d3.select("#d3-div-1").selectAll('.bedazzled')
+    .data(size_data)
+    .enter().append('p')
+      .attr("class","bedazzled")
+      .style("font-size", function(d){ return "" + d + "px";})
+      .text("Hello D3!");
+					</code></pre>
+					</section>
+				</section>
+
+
+                <section>
+				<section>
+					<h2>D3 : Data Driven Documents</h2>
+					<small><url>https://idl.cs.washington.edu/papers/d3/</url></small>
+				</section>
+                    <section>
+                        <h3>HTML Document as a Database</h3>
+
+                        <small class="fragment">
+                            <em>.data(data_array)</em> - binds an array of data to an array of elements.
+
+                                </small>
+                        <img class="fragment" src="res/d3_1.png" alt="d3_1">
+                        <small class="fragment">
+                            Array of elements - result of a database query <em>d3.selectAll(query string)</em>.
+
+                        </small>
+                    </section>
+
+
+                </section>
+                <section>
+                    <h3>Talk D3 to Me!</h3>
+                    <small>
+
+                        <ul>
+                            <li class="fragment">Methods often return the input container instead of their specific result.</li>
+                            <ul class="fragment"><li ><em> d3.select(“rect”).attr(“height”,42).attr(“width”,20)</em> - Returns the rect selection and not the height attribute
+                            </li></ul>
+                            <li class="fragment">Allows “chaining” to avoid need to use variables to store intermediate objects</li>
+                            <ul class="fragment"><li ><em>d3.select(“rect”).attr(“height”,42)</em></li></ul>
+                            <li class="fragment">Methods on selections operate on each element of the selection.</li>
+                            <ul class="fragment"><li ><em>d3.selectAll(“rect”).attr(“width”,20)</em> - Sets all rectangles to width 20.</li></ul>
+                            <li class="fragment">Functions are objects and can be passed as parameters</li>
+                            <ul class="fragment"><li ><em>.attr(“width”, function(d,i) { return d; })</em> - When attr(name,value) method
+                                called on an object with associated data, if “value” is a function, it is called and attribute set to return value</li></ul>
+
+                        </ul>
+                    </small>
+                </section>
+                <section>
+                    <section>
+                        <h2>D3 Joins</h2>
+                    </section>
+                    <section>
+                        <h3>Data Node Joins</h3>
+                        <img src="res/join.png" alt="join">
+                    </section>
+                    <section>
+                        <h3>Join Semantics</h3>
+                        <img src="res/update.png" alt="">
+                    </section>
+                    <section>
+                        <h3>Join Semantics</h3>
+                        <img src="res/enter.png" alt="">
+                    </section>
+                    <section>
+                        <h3>Join Semantics</h3>
+                        <img src="res/exit.png" alt="">
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Selection Methods</h2>
+                        <small><url>https://github.com/d3/d3-selection</url></small>
+                    </section>
+                    <section>
+                        <h3>D3 Selection</h3>
+                        <small>
+
+                            <ul>
+                                <li class="fragment"><em>d3.select(selector)</em></li>
+                                <ul class="fragment"><li >Selects the first element that matches the selector string.</li></ul>
+                                <li class="fragment"><em>d3.selectAll(selector)</em></li>
+                                <ul class="fragment"><li>Selects all elements that match the selector string, in document order</li></ul>
+                                <li class="fragment"><em>d3.selectAll(s1).select(s2)</em></li>
+                                <ul class="fragment"><li >Finds the first descendant element matching s2 of elements matching s1</li></ul>
+                                <li class="fragment"><em>d3.selectAll(s).filter(f)</em></li>
+                                <ul class="fragment"><li >Filters selection by string (or function) f</li></ul>
+                                <li class="fragment"><em>var sel1 = d3.selectAll(s1) d3.selectAll(s2).merge(sel)</em></li>
+                                <ul class="fragment"><li >Union of selection of s1 with selection of s2</li></ul>
+                            </ul>
+                        </small>
+                    </section>
+                    <section>
+                        <h3> Modifying D3 Selected Elements</h3>
+                        <small>
+
+                            <ul>
+                                <li class="fragment"><em>selection.attr(name, value)</em></li>
+                                <ul class="fragment"><li>Sets selection’s named attribute to the given value</li></ul>
+                                <li class="fragment"><em>selection.classed(“c1 c2”, true)</em></li>
+                                <ul class="fragment"><li>Assigns selection to classes c1 and c2</li></ul>
+                                <li class="fragment"><em>selection.style(name, value)</em></li>
+                                <ul class="fragment"><li>Sets a named CSS style parameter to given value</li></ul>
+                                <li class="fragment"><em>selection.text(s)</em></li>
+                                <ul class="fragment"><li>Replaces any child elements of selection with the given text string s</li></ul>
+                                <li class="fragment"><em>selection.html(n)</em></li>
+                                <ul class="fragment"><li>Replaces any child elements of selection with the given innerHTML specification n</li></ul>
+                            </ul>
+                        </small>
+                    </section>
+
+                </section>
+                <section>
+                    <section>
+                        <h2>Selection Patterns</h2>
+                    </section>
+                    <section>
+                        <h3>General Update Pattern</h3>
+                        <img src="res/general.png" alt="">
+                    </section>
+                    <section>
+                        <h3>Megre Pattern</h3>
+                        <img src="res/merge.png" alt="">
+                    </section>
+
+                    <section>
+                        <h3>selectAll.data.enter.append Pattern</h3>
+                        <img src="res/selectUpdate.png" alt="">
+                    </section>
+                    <section>
+                    <h3>selectAll.data.enter.append Pattern</h3>
+                    <img src="res/selectUpdate1.png" alt="">
+                </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>D3 Scales</h2>
+                        <small><url>https://github.com/d3/d3-scale</url></small>
+                    </section>
+                    <section>
+                        <h3>Scale</h3>
+                        <small>A scale is a function that takes an abstract value of data and returns a visual value for display.
+                        </small>
+                        <img src="res/scale.png" alt="">
+                    </section>
+                    <section>
+                        <h3>D3 Scales</h3>
+                        <img src="res/scale1.png" alt="">
+                    </section>
+                    <section>
+                        <h3>D3 Scales</h3>
+                        <img src="res/scale2.png" alt="">
+                    </section>
+                    <section>
+                        <h3>D3 Scales</h3>
+                        <img src="res/scale3.png" alt="">
+                    </section>
+
+                    <section>
+                        <h3>Axes</h3>
+                        <small>
+
+                            <ul>
+                                <li class="fragment"><em>var x = d3.scaleBand().domain([0,1,2,3,4,5]).range([0,width]);</em></li>
+                                <li class="fragment"><em>var y = d3.scaleLinear().domain([0,42]).range([height,0])</em></li>
+                                <li class="fragment"><em>d3.select(“svg”).append("g")
+                                    .attr("transform","translate("+margin+","+margin+")")
+                                    .call(d3.axisLeft(y));
+                                </em></li>
+                                <li class="fragment"><em>d3.select(“svg”).append("g")
+                                    .attr("transform","translate("+margin+","+(height+margin)+")")
+                                    .call(d3.axisBottom(x));</em></li>
+                            </ul>
+                        </small>
+
+                    </section>
+                </section>
+
+
+                <section>
+                    <h1>Demo!</h1>
+                </section>
+
+
+
+				<section>
+					<h3>Where to go from here?</h3>
+                    <small>
+                        <ul>
+                            <li class="fragment"><a href="http://alignedleft.com/">Scott Murray</a> - <a href="http://alignedleft.com/work/d3-book-2e">Interactive Data Visualization for the Web, 2nd Ed.</a></li>
+                            <li class="fragment"><a href="https://bl.ocks.org/emeeks">Elijah Meeks</a> - <a href="https://www.manning.com/books/d3js-in-action-second-edition">D3.js in Action, Second Edition</a></li>
+                            <li class="fragment"><a href="https://www.dashingd3js.com">Dashingd3js</a></li>
+                            <li class="fragment"><a href="http://www.susielu.com">Susie Lu</a> - D3 Plugins</li>
+                            <li class="fragment"><a href="https://github.com/d3/d3/wiki/Gallery">D3 Gallery</a></li>
+                            <li class="fragment"><a href="https://idl.cs.washington.edu">UW Interactive Data Lab  </a></li>
+
+                        </ul>
+                    </small>
+
+				</section>
+
+                <section>
+                    <h2>Thank You!</h2>
+                    <small><email>mail@alokkumarshukla.com</email></small>
+                </section>
+
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
